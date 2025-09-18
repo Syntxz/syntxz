@@ -1,0 +1,151 @@
+/* General body styling */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #2a003f, #1a002a);
+  color: #fff;
+  text-align: center;
+  transition: background 0.5s;
+}
+
+/* Header */
+header {
+  padding: 60px 20px;
+  background: #1a001f;
+  border-bottom: 4px solid #a64dff;
+  position: relative;
+  overflow: hidden;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(178,102,255,0.3), rgba(102,0,204,0.3), rgba(178,102,255,0.3));
+  transform: skewX(-25deg);
+  animation: shine 4s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes shine {
+  0% { left: -50%; }
+  100% { left: 100%; }
+}
+
+header h1 {
+  font-size: 3rem;
+  color: #b266ff;
+  margin: 0;
+  text-shadow: 0 0 12px #a64dff;
+}
+
+header h2 {
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: #ccc;
+  margin: 10px 0 0 0;
+}
+
+header p.lead {
+  margin: 15px 0 0 0;
+  color: #e6ccff;
+  font-size: 1rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(178,102,255,0.2);
+  color: #eedeff;
+  font-size: 0.85rem;
+  margin-top: 15px;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.badge:hover {
+  transform: scale(1.05);
+  background: rgba(178,102,255,0.35);
+}
+
+.badge a {
+  color: #eedeff;
+  text-decoration: none;
+}
+
+.badge a:hover {
+  color: #fff;
+}
+
+/* Sections */
+section {
+  padding: 50px 20px;
+  max-width: 900px;
+  margin: 40px auto;
+  border-radius: 12px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skills, .projects, .contact {
+  background: #2b0040;
+  padding: 25px 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 18px rgba(178,102,255,0.3);
+}
+
+section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(178,102,255,0.5);
+}
+
+/* Headings */
+h3 {
+  color: #b266ff;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  text-shadow: 0 0 6px #a64dff;
+}
+
+/* Lists */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 12px 0;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Links */
+a {
+  color: #b266ff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: #fff;
+  text-shadow: 0 0 6px #b266ff;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header h2 {
+    font-size: 0.9rem;
+  }
+
+  section {
+    padding: 30px 15px;
+  }
+}
